@@ -16,6 +16,10 @@ library(ggplot2)
 library(plotly)
 library(wordcloud)
 library(igraph)
+library(imager)
+library(magick)
+library(base64enc)
+library(httr)
 
 #load file 
 #read_json("/Users/akashshinde/Downloads/e2e4a06022a2f95165f66b7e9b36a515558de6400309a9ffb60bf68af18b796f-2025-07-26-13-11-07-4cc90daf4c8a498294026bf1b5feec4b/shared_conversations.json")
