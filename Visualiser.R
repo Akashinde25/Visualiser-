@@ -27,6 +27,7 @@ cat(" 1. Google Search/MyActivity 💻")
 cat(" 2. ChatGPT Conversation 🤖")
 cat(" 3. text file 📔")
 cat(" 4. image file 🖼️")
+cat(" 5. Audio-file 🎶")
 
 data_type_selected <- NULL
 if (user_data_type_choice == "1") 
