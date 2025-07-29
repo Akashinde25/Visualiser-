@@ -4,19 +4,11 @@ library(readr)
 library(tidyverse)
 library(lubridate)
 library(tidytext)
-library(dplyr)
-library(tidyr)
-library(stringr)
-library(purrr)
-library(tidytext)
 library(topicmodels)
 library(sentimentr)
-library(tm)
-library(ggplot2)
 library(plotly)
 library(wordcloud)
 library(igraph)
-library(imager)
 library(magick)
 library(base64enc)
 library(httr)
@@ -26,35 +18,35 @@ library(httr)
 #read_json("/Users/akashshinde/Downloads/e2e4a06022a2f95165f66b7e9b36a515558de6400309a9ffb60bf68af18b796f-2025-07-26-13-11-07-4cc90daf4c8a498294026bf1b5feec4b/conversations.json")
 
 cat(" Welcome to the Visualizer ")
-cat(" Please choose the type of data you want to process :D ")
-cat(" 1. Google Search/MyActivity 💻")
-cat(" 2. ChatGPT Conversation 🤖")
-cat(" 3. text file 📔")
-cat(" 4. image file 🖼️")
-cat(" 5. Audio-file 🎶")
+#cat(" Please choose the type of data you want to process :D ")
+#cat(" 1. Google Search/MyActivity 💻")
+#cat(" 2. ChatGPT Conversation 🤖")
+#cat(" 3. text file 📔")
+#cat(" 4. image file 🖼️")
+#cat(" 5. Audio-file 🎶")
 
-data_type_selected <- NULL
-if (user_data_type_choice == "1") 
-{
-  data_type_selected <- "Google Search"
-} else if (user_data_type_choice == "2") {
-  data_type_selected <- "Chatgpt"
-} else if (user_data_type_choice == "3") {
-  data_type_selected <- "Text-file"
-} else if (user_data_type_choice == "4") {
-  data_type_selected <- "Image-File"
-} else if (user_data_type_choice == "5") {
-  data_type_selected <- "Audio-file"
-}else {
-  stop(" Invalid data type choice! :\ ")
-}
+#data_type_selected <- NULL
+#if (user_data_type_choice == "1") 
+#{
+#  data_type_selected <- "Google Search"
+#} else if (user_data_type_choice == "2") {
+#  data_type_selected <- "Chatgpt"
+#} else if (user_data_type_choice == "3") {
+#  data_type_selected <- "Text-file"
+#} else if (user_data_type_choice == "4") {
+#  data_type_selected <- "Image-File"
+#} else if (user_data_type_choice == "5") {
+#  data_type_selected <- "Audio-file"
+#}else {
+#  stop(" Invalid data type choice! :\ ")
+#}
 
-cat(" Now, please choose the format of the file you want to upload 📋🧐")
-cat(" 1. JSON (.json )")
-cat("2. CSV (.csv )")
-cat("3. Plain Text (.txt file) ")
-cat("4. Image file (.png, .jpeg, .jpg) ").     #THIS PROHEJT CANNOT PERFORM ACTIVITIES ON IMAGE FILES FOR NOW. GOTTA MAKE AN API FOR THAT IG 
-cat("5. Audio file (.mp3) ")                   #THIS PROHEJT CANNOT PERFORM ACTIVITIES ON MUSIC FILES FOR NOW. GOTTA MAKE AN API FOR THAT IG 
+print(" Now, please choose the format of the file you want to upload 📋🧐")
+print(" 1. JSON (.json )")
+print("2. CSV (.csv )")
+print("3. Plain Text (.txt file) ")
+print("4. Image file (.png, .jpeg, .jpg) ").     #THIS PROHEJT CANNOT PERFORM ACTIVITIES ON IMAGE FILES FOR NOW. GOTTA MAKE AN API FOR THAT IG 
+print("5. Audio file (.mp3) ")                   #THIS PROHEJT CANNOT PERFORM ACTIVITIES ON MUSIC FILES FOR NOW. GOTTA MAKE AN API FOR THAT IG 
 user_file_format_choice <- readline("Enter number for file format 1, 2, 3, 4, or 5 :D ")
 
 file_format_selected <- NULL
@@ -84,7 +76,7 @@ if (user_file_format_choice==1)
   stop(" Invalid file format choice :'( ")
 }
 
-cat(" Please Navigate through to the file you want to open! :) ")
+print(" Please Navigate through to the file you want to open! :) ")
 json_file_path <- file.choose() 
 
 #File error 
